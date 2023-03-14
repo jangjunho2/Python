@@ -2,6 +2,8 @@ StudyApi/API_KEYS.py
 
 StudyApi/__pycache__
 
-Python/package-lock.json
+Crawling/package-lock.json
 
-Python/package.json
+Crawling/package.json
+
+BaekJoon/solution.py

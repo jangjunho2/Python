@@ -1,11 +1,14 @@
 def hello():
     print("Hello, World!")
 
+
 def add(a, b):
     print(f"{a} + {b} = {a+b}")
 
+
 def multiply(a, b):
     print(f"{a} x {b} = {a*b}")
+
 
 my_dict = {"hello": hello, "add": add, "multiply": multiply}
 
