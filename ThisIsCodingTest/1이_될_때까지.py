@@ -8,7 +8,7 @@ while True:
 
     target = (n // k) * k  # k의 배수를 찾습니다.
     cnt += n - target      # k의 배수로 빼는 경우와 그렇지 않은 경우를 한 번에 계산합니다.
-    n -= target
+    n = target
 
     cnt += 1               # k로 나누는 연산을 수행합니다.
     n //= k
