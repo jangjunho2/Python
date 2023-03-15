@@ -8,7 +8,7 @@ block_visited = 1  # 방문한 칸의 갯수
 game_map = [(list(map(int, input().split()))) for _ in range(n)]
 original_map = game_map  # 맵 원본 땅(0), 바다(1)
 
-print(game_map)
+# print(game_map)
 
 dx = [0, 1, 0, -1]  # 북동남서
 dy = [1, 0, -1, 0]  # 북동남서
@@ -30,7 +30,7 @@ while not stop:
     # 3번 조건이 만족하면 끝나게
     blocked = 0  # 주변의 가본 곳 or 바다의 수
     for i in dir_types:  # 막힌 주변수 검사
-        if [x+dx[i], y+dy[i]] == 1:
+        if game_map[x+dx[i]][y+dy[i]] == 1:
             blocked += 1
             if blocked == 4:  # 4곳 전부 막힌 경우 방향유지하고 뒤로 한걸음
                 for i in range(len(dir_types)):
@@ -49,12 +49,12 @@ while not stop:
             nx = x+dx[i]
             ny = y+dy[i]
 
-        if game_map[nx][ny] == 1:  # 바다(1) or 방문한 경우(1) 인 경우
-            continue  # 2번 구현
+            if game_map[nx][ny] == 1:  # 바다(1) or 방문한 경우(1) 인 경우
+                continue  # 2번 구현
 
-        x, y = nx, ny  # 이동
-        block_visited += 1  # 방문한 칸 횟수++
-        game_map[nx][ny] = 1  # 방문 한곳은 다시 방문하지 않으므로 바다(1) 처리
+            x, y = nx, ny  # 이동
+            block_visited += 1  # 방문한 칸 횟수++
+            game_map[nx][ny] = 1  # 방문 한곳은 다시 방문하지 않으므로 바다(1) 처리
 
 
 print(block_visited)
