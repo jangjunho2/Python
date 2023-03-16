@@ -1,4 +1,6 @@
 # 넓이 우선
+# 동작원리: 큐
+# 구현 방법: 큐 자료구조 이용
 from collections import deque
 
 # bfs 메서드 정의
@@ -29,5 +31,4 @@ graph = [
 ]
 
 visited = [False]*9
-
 bfs(graph, 1, visited)
