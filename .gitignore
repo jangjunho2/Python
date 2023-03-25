@@ -11,3 +11,11 @@ BaekJoon/temp.py
 .vscode/
 
 # BaekJoon/note.py
+
+build/
+
+dist/
+
+JupyterNotebook/test.ipynb
+
+Ajin Project/멀티프로세싱.py
