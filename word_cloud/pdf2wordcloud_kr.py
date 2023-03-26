@@ -114,7 +114,7 @@ if __name__ == '__main__':
     else:
         print("코어 사용 X")
         temp = []
-        for i in range(100):
+        for i in range(len(lines)):
             if i % 10000 == 0:
                 print(f"{i:,}")
             temp.append(hannanum.nouns(lines[i]))  # 명사만 저장
