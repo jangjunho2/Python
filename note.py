@@ -71,3 +71,17 @@ Python에서 기본적으로 지원하는 정렬 알고리즘은 Tim Sort는 Sta
 (Tim sort는 Insertion Sort와 Merge Sort를 Hybrid 하여 구현한 알고리즘으로 Insertion과 Merge 모두 Stable Sort Algorithm 입니다.)
 동일한 값을 갖는 경우 순서가 보장되는 Stable Algorithm이니 그냥 나이 순으로 정렬하기만 해도 됩니다.
 '''
+# 리스트 언패킹
+# def print_numbers(a, b, c):
+#     print(a)
+#     print(b)
+#     print(c)
+# x = [10, 20, 30]
+# print_numbers(*x)
+
+# join 쓸때 양옆에 도 넣고싶으면? #언패킹 이용
+# abc = "abc"
+# abc_with_commas = ",".join(["", *abc, ""])
+# print(abc_with_commas)
+
+# 해싱 할땐 소수를 사용하여 해시값 생성하면 충동 가능성 -- ex)31

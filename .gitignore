@@ -6,8 +6,6 @@ Crawling/package-lock.json
 
 Crawling/package.json
 
-BaekJoon/temp.py
-
 .vscode/
 
 # BaekJoon/note.py
@@ -18,3 +16,6 @@ dist/
 
 JupyterNotebook/test.ipynb
 
+memo.txt
+
+temp.py
