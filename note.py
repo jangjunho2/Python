@@ -85,3 +85,34 @@ Python에서 기본적으로 지원하는 정렬 알고리즘은 Tim Sort는 Sta
 # print(abc_with_commas)
 
 # 해싱 할땐 소수를 사용하여 해시값 생성하면 충동 가능성 -- ex)31
+
+# 잘못된 리스트 복사
+# a,b모두 같은 리스트를 참조하고 있기 때문에 둘다 [10,10]
+# a = [10]
+# b = a
+# b.append(10)
+# print(a, b)
+
+# 리스트 복사
+# 1. 슬라이싱을 통한 방법
+# a = [1, 2, 3]
+# b = a[:]
+# b.append(10)
+# print(a, b)
+# 2. copy() 메스드를 이용한 리스트 복사
+# a = [1, 2, 3]
+# b = a.copy()
+# b.append(10)
+# print(a, b)
+
+# for i in range(100):
+#     print(i)
+#     if i == 50:
+#         i -= 1
+
+
+a = [1, 2, 3, 4, 5]
+for i in a:
+    if i == 2:
+        a.remove(i)
+    print(i)
