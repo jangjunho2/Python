@@ -12,7 +12,7 @@ def binary_search(array, target, start, end):
 
 n = int(input())
 have = list(map(int, input().split()))
-m = input()
+m = int(input())
 wants = list(map(int, input().split()))
 
 

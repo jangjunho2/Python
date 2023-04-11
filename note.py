@@ -105,14 +105,15 @@ Python에서 기본적으로 지원하는 정렬 알고리즘은 Tim Sort는 Sta
 # b.append(10)
 # print(a, b)
 
+# 반복문에서 iterator 값을 수정해도 바뀌지않는다.
 # for i in range(100):
 #     print(i)
 #     if i == 50:
 #         i -= 1
 
-
-a = [1, 2, 3, 4, 5]
-for i in a:
-    if i == 2:
-        a.remove(i)
-    print(i)
+# 리스트에서 원소를 제거하면서 반복문을 돌리면, 리스트의 크기가 줄어들기 때문에 반복문이 예상대로 동작하지 않을 수 있다.
+# a = [1, 2, 3, 4, 5]
+# for i in a:
+#     if i == 2:
+#         a.remove(i)
+#     print(i)

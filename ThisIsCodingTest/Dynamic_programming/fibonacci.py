@@ -8,4 +8,3 @@ def fibo(x):
 print(fibo(10))
 print(fibo(20))
 print(fibo(30))
-# print(fibo(40))

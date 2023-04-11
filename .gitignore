@@ -1,3 +1,5 @@
+#이미 올라간 파일은 gitignore 써도 효과 없음, 새로 추가되는 파일에 대해서만 적용
+
 StudyApi/API_KEYS.py
 
 StudyApi/__pycache__
