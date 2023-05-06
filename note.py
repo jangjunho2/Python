@@ -117,3 +117,11 @@ Python에서 기본적으로 지원하는 정렬 알고리즘은 Tim Sort는 Sta
 #     if i == 2:
 #         a.remove(i)
 #     print(i)
+
+# list1+=list2 # list1.extend(list2)
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# a += b #extend
+# a.append(b) #append
+# a.extend(b) #extend
+# print(a)

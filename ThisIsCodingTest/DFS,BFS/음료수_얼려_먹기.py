@@ -11,14 +11,14 @@ find_crack
 '''
 
 
-def find_crack():
-    global ice
+def find_crack(ice):
     for i in range(row):  # 여기서 row를 사용 할수 있는 이유??? 지역변수아님?
         for j in range(col):
             # 틈(0) and not 방문한곳이면  #dfs 함수 호출
             if array[i][j] == 0 and not visited[i][j]:
                 dfs(array, i, j)
                 ice += 1
+    return ice
 
 
 '''
@@ -42,6 +42,7 @@ def dfs(array, r, c):
             if array[nrow][ncol] == 0 and not visited[nrow][ncol]:
                 dfs(array, nrow, ncol)  # 방문 ㄱ
 
+
     # n, m 입력받기
 row, col = map(int, input().split())
 
@@ -55,5 +56,4 @@ visited = [[False]*col for _ in range(row)]  # 얼음 크기만큼 방문한곳 
 # print(visited)
 ice = 0  # 아이스크림 수
 
-find_crack()  # dfs 호출함수시작
-print(ice)  # 정답 출력
+print(find_crack(ice))  # dfs 호출함수시작
