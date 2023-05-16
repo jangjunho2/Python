@@ -125,3 +125,31 @@ Python에서 기본적으로 지원하는 정렬 알고리즘은 Tim Sort는 Sta
 # a.append(b) #append
 # a.extend(b) #extend
 # print(a)
+
+# 집합
+# 빈 집합 생성
+# my_set=set()
+# 교집합
+# set1 & set2
+# 합집합
+# set1 | set2
+# 차집합
+# set1-set2
+# 값 추가
+# set1.add(10)
+# 값 여러개 추가 update
+# set1.update(range(1,20))
+# 제거
+# my_set.remove(x)
+# my_set.discard(x)  # remove 쓰면 x가 없을때 에러, discard 쓰면 x가 없을때 무시됨
+
+# yield
+# def number_generator():
+#     yield 0
+#     yield 1
+#     yield 2
+# for i in number_generator():
+#     print(i)
+# g = number_generator()
+# print(g)
+# print(dir(g))
