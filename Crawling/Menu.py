@@ -3,12 +3,23 @@ from bs4 import BeautifulSoup
 import html
 import datetime
 
+# from flask import Flask, render_template
+
 days = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
 url = "https://coop.gwnu.ac.kr/contents.asp?page=848"
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
 curr_time = datetime.datetime.now()
 week_num = curr_time.weekday()
+result = ""
+
+
+# app = Flask(__name__)
+
+
+# @app.route("/")
+# def printOnWeb():
+#     return render_template("menu.html", meal=result)
 
 
 for i in range(1, 22):
@@ -19,8 +30,10 @@ for i in range(1, 22):
 
         if i % 3 == 2:
             print("\t중식\n")
+            result += "\t중식\n"
         else:
             print("\t석식\n")
+            result += "\t석식\n"
 
         menu_text = soup.select_one(
             f"#diet_1_1 > div.table-responsive > table > tbody > tr:nth-child({i}) > td.left"
@@ -31,3 +44,8 @@ for i in range(1, 22):
         for menu_item in menu_items:
             decoded_output = html.unescape(menu_item)
             print(decoded_output)
+            result += decoded_output
+
+
+# if __name__ == "__main__":
+#     app.run()
